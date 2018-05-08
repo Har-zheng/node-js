@@ -7,9 +7,11 @@ module.exports = {
         console.log("同步方法执行完毕");
     },
     readfile:function (path,recall) {
+
         fs.readFile(path,'utf-8', function (err, data) {
             if (err){
-                console.log(err);
+                console.log("文件不存在"+err);
+                recall("文件不存在")
             } else {
                 console.log(data.toString());
                 recall(data);

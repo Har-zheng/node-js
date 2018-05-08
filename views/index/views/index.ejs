@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>node session</title>
+</head>
+<body>
+
+<h1 align="center">Session 会话</h1>
+
+<% if(isLogined){ %>
+<p align="center">当前登录用户：<%= name %>，<a href="/logout" id="logout">退出登陆</a></p>
+<% }else{ %>
+<form method="POST" action="/login" align="center">
+  <input type="text" id="name" name="name" value="zhz" />
+  <input type="password" id="password" name="password" value="666" />
+  <input type="submit" value="登录" id="login" />
+</form>
+<% } %>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>node正则</title>
+    <script>
+        var str = 'sjfhs{name}hfhss{name}fHello';
+        var re = /\{name\}/g;
+        window.onload = function () {
+            newStr = str.replace(re,'张三');
+            alert(newStr)
+            /*
+            if (re.test(str)){
+                alert("含有");
+            } else {
+                alert("没有");
+            }
+            */
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
