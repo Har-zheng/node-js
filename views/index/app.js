@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use(session({
 
     name: identityKey,
-    secret: 'chyingp',  // 用来对session id相关的cookie进行签名
+    secret: 'zhz',  // 用来对session id相关的cookie进行签名
     store: new FileStore(),  // 本地存储session（文本文件，也可以选择其他store，比如redis的）
     saveUninitialized: false,  // 是否自动保存未初始化的会话，建议false
     resave: false,  // 是否每次都重新保存会话，建议false
@@ -92,4 +92,5 @@ app.get('/logout', function(req, res, next){
 });
 
 app.listen(3000);
+
 console.log("请启动  http://127.0.0.1:3000/");
